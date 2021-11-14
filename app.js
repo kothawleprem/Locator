@@ -2,15 +2,15 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
-const dotenv = require("dotenv");
+
 const port = process.env.PORT || 5000
 
 app.use(cors())
 app.use(express.json())
-dotenv.config({ path: './config.env'});
+
 
 // connnect to mongoose
-const DB = process.env.DATABASE;
+const DB = 'mongodb+srv://admin:admin@cluster0.0wl69.mongodb.net/locator?retryWrites=true&w=majority'
 
 const connectionParams={
     useNewUrlParser: true,
