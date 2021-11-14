@@ -39,6 +39,10 @@ router.route("/create").post((req,res) => {
     newAddress.save()
 })
 
+router.route("/").get((req,res) => {
+    res.json("Welcome to locatorr - server")
+})
+
 router.route("/locations").get((req,res) => {
     Address.find()
     .then(foundAddress => res.json(foundAddress))
